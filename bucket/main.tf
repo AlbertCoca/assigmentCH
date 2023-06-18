@@ -26,3 +26,21 @@ resource "aws_s3_bucket_acl" "default" {
   bucket = aws_s3_bucket.default.id
   acl    = "private"
 }
+
+resource "aws_s3_bucket_versioning" "default" {
+  bucket = aws_s3_bucket.default.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "l1" {
+  bucket = aws_s3_bucket.default.id
+  rule {
+    status = "Enabled"
+    id     = "expire_all_files"
+    expiration {
+      days = 30
+    }
+  }
+}
