@@ -44,3 +44,19 @@ resource "aws_s3_bucket_lifecycle_configuration" "l1" {
     }
   }
 }
+
+resource "random_string" "random" {
+  count = 3
+
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+
+resource "aws_s3_object" "object" {
+  count = 3
+
+  bucket  = aws_s3_bucket.default.id
+  key     = "dummy-${count.index}"
+  content = random_string.random[count.index].result
+}
