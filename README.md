@@ -34,10 +34,10 @@ only after proper testing and review.
 # Considerations
 
 1. I have decided to use AWS instead of Azure (The cloud I use at my current
-   job) the main reason for this is because I wanted to show one of my 
-   strenghts which is learning fast. The second reason is that I felt excited
+   job) mainly because I wanted to showcase one of my 
+   strengths, which is learning fast. The second reason is that I feel excited
    to try a different cloud provider. Even if I'm confident that what has 
-   been delivered is what it's expected **there might be some issues precily 
+   been delivered is what is expected **there may be some issues precisely 
    because I'm not as familiar with AWS than with Azure**, I apologize in 
    advance and hope you can understand. I will appreciate any feedback you can
    give to me ;)
@@ -53,11 +53,11 @@ only after proper testing and review.
     website is exposed is on a virtual private network. Not exposed to the 
     whole internet
 
-3. For de development methodology I have used something similar to the
+3. For the development methodology, I have used something similar to the
    feature branch workflow. You can take a look at the branches in the 
    repository (that I have not deleted in this case), the issues and the 
-   pull requests (that I have myself merged in this case because there are
-   no reviewers.
+   pull requests (that I merged myself because I'm working alone for this 
+   test).
 
 # Set remote state file locking
 
